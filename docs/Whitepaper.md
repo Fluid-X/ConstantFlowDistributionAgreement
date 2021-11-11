@@ -169,7 +169,7 @@ distributed via a super app hook, an ERC777 hook, or off chain infrastructure.
 In an effort to minimize off-chain infrastructure, the CFDA would offer the
 scalability of an IDA with the autonomy of the CFA.
 
-### 2.2 Ricochet Exchange
+### 2.2 - Ricochet Exchange
 
 The current Ricochet Exchange architecture relies on calling IDA distribute,
 with the amount distributed determined by a Tellor oracle. This means the end
@@ -183,14 +183,14 @@ adjustment would update the flow rates of the token1 being streamed back to the
 subscribers streaming token0. This would make for a seem-less and more user-
 friendly experience.
 
-### 2.3 CFDA Rewards Token
+### 2.3 - CFDA Rewards Token
 
 Much like the IDA Rewards Token built by Miao in the Superfluid examples
 directory, the CFDA Rewards Token would create a synthetic ERC20 token where the
 balances of an account would entitle the respective account a portion of the
 sender's flow rate, opening many use cases for recurring token holder rewards.
 
-### 2.4 FluidX
+### 2.4 - FluidX
 
 The FluidX super token native AMM (in development) already offers functionality
 unique to super tokens, optimizing for user experience, but a CFDA would also
@@ -202,7 +202,7 @@ two tokens out of the pair proportionally maintains the constant product, the
 flow rate itself would not need to be purely dynamic, but rather only update
 when a swap is executed.
 
-### 2.5 Simulated Dynamic Flow Rates
+### 2.5 - Simulated Dynamic Flow Rates
 
 A project that seeks to simulate dynamic flow rates could run off-chain
 infrastructure to periodically adjust the net flow rate based on a given
