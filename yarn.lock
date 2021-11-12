@@ -667,7 +667,7 @@
     "@ethersproject/properties" "^5.0.3"
     "@ethersproject/strings" "^5.0.4"
 
-"@ethersproject/abi@5.5.0", "@ethersproject/abi@^5.4.0", "@ethersproject/abi@^5.5.0":
+"@ethersproject/abi@5.5.0", "@ethersproject/abi@^5.4.0", "@ethersproject/abi@^5.4.1", "@ethersproject/abi@^5.5.0":
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/@ethersproject/abi/-/abi-5.5.0.tgz#fb52820e22e50b854ff15ce1647cc508d6660613"
   integrity sha512-loW7I4AohP5KycATvc0MgujU6JyCHPqHdeoo9z3Nr9xEiNioxa65ccdm1+fsoJhkuhdRtfcL8cfyGamz2AxZ5w==
@@ -1612,6 +1612,15 @@
   integrity sha512-Dmy+0hs0qMm7RQeHunF61Jv+HkHgYzg6AfXGGX5piHnsRlbuBmauXmvnIbTjN6ci7T3u0dfhbrg1nBECMiZQug==
   dependencies:
     "@ethersproject/abi" "^5.4.0"
+    "@ethersproject/hash" "^5.4.0"
+    auto-bind "^4.0.0"
+
+"@superfluid-finance/js-sdk@^0.5.5":
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/@superfluid-finance/js-sdk/-/js-sdk-0.5.5.tgz#9b311b4ad3e9d43ba14e7da734b0bbf745ea52e9"
+  integrity sha512-HXCQUYVf0OfandzTWVV9vfn3tnBtj2A6PeM6XzILHpHmk4P5WPW2O3FJ6lYjVTSo2DDRoamrE2B2ZkKxjneWSQ==
+  dependencies:
+    "@ethersproject/abi" "^5.4.1"
     "@ethersproject/hash" "^5.4.0"
     auto-bind "^4.0.0"
 
