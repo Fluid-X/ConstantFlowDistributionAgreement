@@ -309,6 +309,12 @@ abstract contract IConstantFlowDistributionAgreementV1 is ISuperAgreement {
 	) external virtual returns (bytes memory newCtx);
     
     /// @dev Get flow info for an account and token
+    /// @param token Super token address
+    /// @param account Account address
+    /// @return timestamp Last updated timestamp
+    /// @return flowRate Per second flow rate
+    /// @return deposit Account deposit
+    /// @return owedDeposit Account deposit owed
     function getAccountFlowInfo(
         ISuperfluidToken token,
         address account
@@ -323,6 +329,9 @@ abstract contract IConstantFlowDistributionAgreementV1 is ISuperAgreement {
             uint256 owedDeposit
         );
 
+    /// @dev Get net flow rate of a token given an account
+    /// @param token Super token address
+    /// @param account Account address
     function getNetFlow(
         ISuperfluidToken token,
         address account
@@ -332,10 +341,16 @@ abstract contract IConstantFlowDistributionAgreementV1 is ISuperAgreement {
         virtual
         returns (int96 flowRate);
 
+    /// @dev Delete flow from a publisher
+    /// @param token Super token address
+    /// @param publisher Index publisher, Flow sender
+    /// @param indexId Index id
+    /// NOTE: Publisher may stop stream, Sentinel may stop stream IF INSOLVENT
+    /// Subscribers may NOT stop stream, as they can just revoke subscription
     function deleteFlow(
         ISuperfluidToken token,
-        address sender,
-        address receiver,
+        address publisher,
+        address indexId,
         bytes calldata ctx
     ) external virtual returns (bytes memory newCtx);
 }
