@@ -7,7 +7,8 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "truffle compile --all",
-		"test": "truffle test"
+		"test": "truffle test",
+		"precision": "python3 docs/scripts/data_packing.py"
 	},
 	"devDependencies": {
 		"@decentral.ee/web3-helpers": "^0.5.3",

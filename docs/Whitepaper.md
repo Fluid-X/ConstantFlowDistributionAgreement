@@ -104,7 +104,7 @@ update.
 dynamic_balance = 0
 
 # iterate subscriptions like IDA
-for subscription in token_account_subscriptions:
+for subscription in token_account_approved_subscriptions:
 
     # calculate real time index value based on sender flow rate
     real_time_index = (time - last_time_update) * index_flow_rate

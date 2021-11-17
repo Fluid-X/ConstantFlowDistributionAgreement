@@ -16,12 +16,13 @@ contract("ConstantFlowDistributionAgreementV1", accounts => {
 	it("encode FlowIndexData", async () => {
 		const flowIndexData = {
 			timestamp: 1618876800,
-			flowRate: "1234000000000000000000",
-			deposit: "5678000000000000000000",
-			owedDeposit: "9012000000000000000000",
-			totalUnitsPending: "3456000000000000000000",
-			totalUnitsApproved: "7890000000000000000000"
+			flowRate: "1000000000000000000",
+			deposit: "14400000000000000000000",
+			owedDeposit: "0",
+			totalUnitsPending: "1000",
+			totalUnitsApproved: "1000"
 		}
+
 		const encodedFlowIndexData = await CFDAv1.encodeFlowIndexDataTest.call(
 			flowIndexData.timestamp,
 			flowIndexData.flowRate,
@@ -30,6 +31,30 @@ contract("ConstantFlowDistributionAgreementV1", accounts => {
 			flowIndexData.totalUnitsPending,
 			flowIndexData.totalUnitsApproved
 		)
+
 		console.log({ encodedFlowIndexData })
+	})
+
+	it("encode FlowSubscriptionData", async () => {
+		const flowSubscriptionData = {
+			subscriptionId: 15,
+			flowRate: "1000000000000000000",
+			units: 10,
+			indexId: 24,
+			publisher: "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+			timestamp: 1618876800
+		}
+
+		const encodeFlowSubscriptionData =
+			await CFDAv1.encodeFlowSubscriptionDataTest.call(
+				flowSubscriptionData.subscriptionId,
+				flowSubscriptionData.flowRate,
+				flowSubscriptionData.units,
+				flowSubscriptionData.indexId,
+				flowSubscriptionData.publisher,
+				flowSubscriptionData.timestamp
+			)
+
+		console.log({ encodeFlowSubscriptionData })
 	})
 })

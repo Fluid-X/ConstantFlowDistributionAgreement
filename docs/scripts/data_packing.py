@@ -20,11 +20,11 @@ def main():
     (recovered_timestamp, recovered_flow_rate, recovered_deposit, recovered_owed_deposit) = decode(word)
 
     print('DATA PACKING')
-    print('timestamp:\t{} -> {}'.format(timestamp, recovered_timestamp))
-    print('flow_rate:\t{} -> {}'.format(flow_rate, recovered_flow_rate))
-    print('deposit:\t{} -> {}'.format(deposit, recovered_deposit))
-    print('owed_deposit:\t{} -> {}'.format(owed_deposit, recovered_owed_deposit))
-    print('encoded:\t{}'.format(hex(word)))
+    print('timestamp:\t{}\t\t-> {}'.format(timestamp, recovered_timestamp))
+    print('flow_rate:\t{}\t-> {}'.format(flow_rate, recovered_flow_rate))
+    print('deposit:\t{}\t-> {}'.format(deposit, recovered_deposit))
+    print('owed_deposit:\t{}\t-> {}'.format(owed_deposit, recovered_owed_deposit))
+    print('\nfull encoded word:\t{}'.format(hex(word)))
 
 
 main()
